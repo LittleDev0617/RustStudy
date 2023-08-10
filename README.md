@@ -307,3 +307,55 @@ fn main() {
     println!("The value of number is: {}", number);
 }
 ```
+
+<hr />
+
+# 반복문
+## loop
+
+```rust
+fn main() {
+    // 무한 반복
+    loop {
+        // if, break 를 통한 탈출
+        println!("again!");
+    }
+}
+```
+
+## while
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+
+        index = index + 1;
+    }
+}
+```
+
+## for
+while 을 사용하여 배열에 인덱스로 접근하는 것은 배열의 크기를 넘은 값을 참조할 위험이 있습니다.  
+for 를 통해 안전하게 코드를 짤 수 있습니다.  
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a.iter() {
+        println!("the value is: {}", element);
+    }
+}
+```
+
+Range 는 [a,b) 의 숫자를 차례로 생성합니다.  
+```rust
+fn main() {
+    for number in (1..4) {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
+}
+```
